@@ -1,0 +1,46 @@
+/* Reset di base */
+/* Custom font e stili unici per Valo Merch */
+
+/* 1. Cambio colore del logo principale */
+.logo {
+    letter-spacing: 2px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* 2. Effetto Hover sulle schede delle magliette */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(255, 70, 85, 0.2);
+}
+/* Posizionamento del video di sfondo */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.4; /* Regola la trasparenza (0.1 più scuro, 1.0 visibilità massima) */
+}
+
+/* 3. Personalizzazione dei pulsanti Acquista */
+.buy-btn:hover {
+    background-color: #ff4655 !important;
+    border-color: #ff4655 !important;
+    color: white !important;
+}
+
+/* 4. Immagine placeholder con bordo arrotondato */
+.img-placeholder {
+    border-radius: 6px 6px 0 0;
+    font-weight: 500;
+}
