@@ -1,26 +1,20 @@
-/* Reset di base */
-/* Custom font e stili unici per Valo Merch */
+/* --- 1. Importazione Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
-/* 1. Cambio colore del logo principale */
-.logo {
-    letter-spacing: 2px;
-    transition: transform 0.3s ease;
+/* --- 2. Reset e Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.logo:hover {
-    transform: scale(1.05);
+body {
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
 }
 
-/* 2. Effetto Hover sulle schede delle magliette */
-.product-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(255, 70, 85, 0.2);
-}
-/* Posizionamento del video di sfondo */
+/* --- 3. Video di Sfondo --- */
 #bg-video {
     position: fixed;
     top: 0;
@@ -29,18 +23,134 @@
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    opacity: 0.4; /* Regola la trasparenza (0.1 più scuro, 1.0 visibilità massima) */
+    opacity: 0.25;
 }
 
-/* 3. Personalizzazione dei pulsanti Acquista */
+/* --- 4. Utility Font --- */
+.font-logo {
+    font-family: 'Dancing Script', cursive;
+}
+
+.font-text {
+    font-family: 'Playfair Display', serif;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* --- 5. Navbar --- */
+.navbar {
+    border-bottom: 1px solid #222;
+}
+
+.nav-link {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    text-transform: lowercase;
+    color: #fff !important;
+    font-size: 1.1rem;
+    margin-right: 15px;
+}
+
+/* --- 6. Hero Logo --- */
+.logo-container {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.logo-main {
+    font-size: 5.5rem;
+    letter-spacing: 2px;
+}
+
+.logo-sub {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* --- 7. Schede Prodotto e Immagini Hover --- */
+.product-card {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid #222 !important;
+    padding: 20px;
+    border-radius: 0 !important;
+    transition: transform 0.3s ease;
+}
+
+.product-title {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.product-img-wrapper {
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #0a0a0a;
+    border: 1px solid #1a1a1a;
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.3s ease;
+}
+
+/* --- 8. Controlli Colore & Taglia --- */
+.product-selection-label {
+    font-size: 0.85rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.color-swatch-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.color-swatch {
+    width: 26px;
+    height: 26px;
+    border: 1px solid #555;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.color-swatch:hover, .color-swatch.active {
+    border: 2px solid #fff;
+    transform: scale(1.1);
+}
+
+.size-select {
+    background-color: #111 !important;
+    color: #fff !important;
+    border: 1px solid #444 !important;
+    border-radius: 0 !important;
+    max-width: 180px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.size-select:focus {
+    box-shadow: none !important;
+    border-color: #fff !important;
+}
+
+.buy-btn {
+    border-radius: 0 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-color: #fff !important;
+    color: #fff !important;
+    transition: all 0.3s ease;
+}
+
 .buy-btn:hover {
-    background-color: #ff4655 !important;
-    border-color: #ff4655 !important;
-    color: white !important;
-}
-
-/* 4. Immagine placeholder con bordo arrotondato */
-.img-placeholder {
-    border-radius: 6px 6px 0 0;
-    font-weight: 500;
+    background-color: #fff !important;
+    color: #000 !important;
 }
