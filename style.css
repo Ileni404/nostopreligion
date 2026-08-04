@@ -1,6 +1,13 @@
 /* --- 1. Importazione Font --- */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
+@font-face {
+  font-family: 'Geizer';
+  src: url('./geizer/geizer.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* --- 2. Reset e Base --- */
 * {
     margin: 0;
@@ -15,7 +22,8 @@ body {
 }
 
 /* --- 3. Video di Sfondo --- */
-#bg-video {
+#bg-video 
+{
     position: fixed;
     top: 0;
     left: 0;
@@ -23,22 +31,31 @@ body {
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    opacity: 0.25;
+    opacity: 0.85; /* Aumentato da 0.3 per renderlo molto più luminoso */
+    filter: brightness(1.1) contrast(1.05); /* Un piccolo boost di luminosità e contrasto */
+
 }
 
 /* --- 4. Utility Font --- */
+.logo, 
+.brand-name {
+  font-family: 'Geizer', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .font-logo {
-    font-family: 'Dancing Script', cursive;
+  font-family: 'Geizer', sans-serif;
+  text-transform: uppercase;
 }
 
 .font-text {
-    font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
 }
 
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
-
 /* --- 5. Navbar --- */
 .navbar {
     border-bottom: 1px solid #222;
@@ -59,9 +76,10 @@ body {
     margin-bottom: 40px;
 }
 
-.logo-main {
-    font-size: 5.5rem;
-    letter-spacing: 2px;
+.logo-main,
+.font-logo {
+  font-family: 'Geizer', sans-serif;
+  text-transform: uppercase;
 }
 
 .logo-sub {
@@ -79,8 +97,9 @@ body {
 }
 
 .product-title {
-    font-size: 2rem;
-    color: #fff;
+    font-family: 'Geizer', sans-serif;
+  font-size: 2rem;
+  color: #fff;
 }
 
 .product-img-wrapper {
