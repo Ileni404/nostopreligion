@@ -22,8 +22,7 @@ body {
 }
 
 /* --- 3. Video di Sfondo --- */
-#bg-video 
-{
+#bg-video {
     position: fixed;
     top: 0;
     left: 0;
@@ -31,22 +30,15 @@ body {
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    opacity: 0.85; /* Aumentato da 0.3 per renderlo molto più luminoso */
-    filter: brightness(1.1) contrast(1.05); /* Un piccolo boost di luminosità e contrasto */
-
+    opacity: 0.5; /* Bilanciato per far leggere i testi chiaramente */
+    filter: brightness(1.05) contrast(1.05);
 }
 
 /* --- 4. Utility Font --- */
-.logo, 
-.brand-name {
-  font-family: 'Geizer', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 .font-logo {
   font-family: 'Geizer', sans-serif;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .font-text {
@@ -56,9 +48,12 @@ body {
 .italic {
   font-style: italic;
 }
+
 /* --- 5. Navbar --- */
 .navbar {
     border-bottom: 1px solid #222;
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(5px);
 }
 
 .nav-link {
@@ -68,108 +63,63 @@ body {
     color: #fff !important;
     font-size: 1.1rem;
     margin-right: 15px;
+    transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.7;
+}
+
+.social-icons-nav a {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icons-nav a:hover,
+.social-link:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
 }
 
 /* --- 6. Hero Logo --- */
 .logo-container {
-    margin-top: 30px;
-    margin-bottom: 40px;
-}
-
-.logo-main,
-.font-logo {
-  font-family: 'Geizer', sans-serif;
-  text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .logo-sub {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #ccc;
 }
 
-/* --- 7. Schede Prodotto e Immagini Hover --- */
+/* --- 7. Schede Merch Espositive --- */
 .product-card {
-    background-color: rgba(0, 0, 0, 0.4) !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
     border: 1px solid #222 !important;
-    padding: 20px;
-    border-radius: 0 !important;
-    transition: transform 0.3s ease;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: #444 !important;
 }
 
 .product-title {
     font-family: 'Geizer', sans-serif;
-  font-size: 2rem;
-  color: #fff;
+    color: #fff;
+    margin-top: 10px;
 }
 
 .product-img-wrapper {
     overflow: hidden;
-    cursor: pointer;
     background-color: #0a0a0a;
     border: 1px solid #1a1a1a;
 }
 
-.product-img {
-    width: 100%;
-    height: auto;
-    max-width: 320px;
-    display: block;
-    margin: 0 auto;
-    transition: opacity 0.3s ease;
+.product-img-wrapper img {
+    transition: transform 0.3s ease;
 }
 
-/* --- 8. Controlli Colore & Taglia --- */
-.product-selection-label {
-    font-size: 0.85rem;
-    color: #aaa;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.color-swatch-container {
-    display: flex;
-    gap: 10px;
-    margin-top: 5px;
-}
-
-.color-swatch {
-    width: 26px;
-    height: 26px;
-    border: 1px solid #555;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.color-swatch:hover, .color-swatch.active {
-    border: 2px solid #fff;
-    transform: scale(1.1);
-}
-
-.size-select {
-    background-color: #111 !important;
-    color: #fff !important;
-    border: 1px solid #444 !important;
-    border-radius: 0 !important;
-    max-width: 180px;
-    margin-top: 5px;
-    cursor: pointer;
-}
-
-.size-select:focus {
-    box-shadow: none !important;
-    border-color: #fff !important;
-}
-
-.buy-btn {
-    border-radius: 0 !important;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-color: #fff !important;
-    color: #fff !important;
-    transition: all 0.3s ease;
-}
-
-.buy-btn:hover {
-    background-color: #fff !important;
-    color: #000 !important;
+.product-card:hover .product-img-wrapper img {
+    transform: scale(1.03);
 }
