@@ -16,11 +16,6 @@
 </head>
 <body class="bg-black text-white">
 
-    <!-- Video di Sfondo -->
-    <video autoplay muted loop playsinline id="bg-video">
-        <source src="video_bg_html_valo.mp4" type="video/mp4">
-    </video>
-
     <!-- Header / Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black px-4 sticky-top">
         <div class="container-fluid">
@@ -61,7 +56,7 @@
         <h2 class="font-logo text-center mb-4 display-5">Musica</h2>
         <div class="row justify-content-center">
             <div class="col-md-8 text-center">
-                <!-- Esempio Player Spotify (sostituibile con il tuo link esatto) -->
+                <!-- Player Spotify -->
                 <div class="ratio ratio-16x9 shadow-lg border border-secondary">
                     <iframe src="https://open.spotify.com/embed/artist/4q3ewBCX7AL32L393of33A?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
@@ -69,32 +64,37 @@
         </div>
     </section>
 
-    <!-- Sezione Merch (Vetrina Espositiva) -->
+    <!-- Sezione Merch (Vetrina Espositiva con Fronte/Retro) -->
     <section id="merch" class="container my-5 py-4">
         <h2 class="font-logo text-center mb-4 display-5">Merch</h2>
         <div class="row g-4 justify-content-center">
-            <!-- Prodotto 1 -->
-            <div class="col-md-4 col-sm-6">
+            
+            <!-- Prodotto 1: Troppo Co -->
+            <div class="col-md-5 col-sm-6">
                 <div class="product-card text-center h-100 p-3 border border-dark">
                     <div class="product-img-wrapper mb-3">
-                        <img src="https://via.placeholder.com/300x350/111111/ffffff?text=ValoB+T-Shirt" class="img-fluid" alt="Maglietta ValoB">
+                        <img src="troppoco-front.jpg" alt="T-Shirt Troppo Co Fronte" class="img-fluid img-front">
+                        <img src="troppoco-back.jpg" alt="T-Shirt Troppo Co Retro" class="img-fluid img-back">
                     </div>
-                    <h3 class="product-title h4">T-Shirt Official</h3>
-                    <p class="font-text italic text-secondary">Edizione Limitata</p>
+                    <h3 class="product-title h4">T-Shirt "Troppo Co"</h3>
+                    <p class="font-text italic text-secondary">Passa il mouse per il retro</p>
                     <a href="https://www.instagram.com/" target="_blank" class="btn btn-outline-light btn-sm rounded-0 w-100 font-text">Info & Disponibilità su IG</a>
                 </div>
             </div>
-            <!-- Prodotto 2 -->
-            <div class="col-md-4 col-sm-6">
+
+            <!-- Prodotto 2: No Stop -->
+            <div class="col-md-5 col-sm-6">
                 <div class="product-card text-center h-100 p-3 border border-dark">
                     <div class="product-img-wrapper mb-3">
-                        <img src="https://via.placeholder.com/300x350/111111/ffffff?text=ValoB+Hoodie" class="img-fluid" alt="Felpa ValoB">
+                        <img src="nostop-front.jpg" alt="T-Shirt No Stop Fronte" class="img-fluid img-front">
+                        <img src="nostop-back.jpg" alt="T-Shirt No Stop Retro" class="img-fluid img-back">
                     </div>
-                    <h3 class="product-title h4">Hoodie Logo</h3>
-                    <p class="font-text italic text-secondary">Cotone Heavyweight</p>
+                    <h3 class="product-title h4">T-Shirt "No Stop"</h3>
+                    <p class="font-text italic text-secondary">Passa il mouse per il retro</p>
                     <a href="https://www.instagram.com/" target="_blank" class="btn btn-outline-light btn-sm rounded-0 w-100 font-text">Info & Disponibilità su IG</a>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -114,7 +114,7 @@
         </div>
     </footer>
 
-    <!-- Bootstrap Script (Nessun file app.js richiesto!) -->
+    <!-- Bootstrap Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
